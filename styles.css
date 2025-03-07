@@ -1,0 +1,149 @@
+
+:root{
+    --text-primary: #2a342d;
+    --text-secondary: rgba(28, 38, 31, 0.631);
+    --text-with-background: rgba(226, 244, 231, 0.847);
+
+    --background: #E2F3E8;
+    --light-background: #EFF8F2;
+
+    --selected: #3AA35D;
+    --unselected: rgba(43, 122, 70, 0.736);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: var(--background);
+}
+#aboutMe,
+h1{
+    color: var(--text-with-background);
+}
+
+#aboutMe{
+    font-family:'Courier New', Courier, monospace;
+}
+
+.title h1{
+    font-size: 100px;
+}
+.mainContainer {
+    display: grid;
+    grid-template-rows:50px 300px auto 50px ;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(33, 92, 53);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    width: 50px; 
+    transition: width 500ms ease;
+    z-index: 100;
+}
+
+
+.navbar:hover {
+    width: 100%;
+}
+
+.navbar ul {
+    display: flex; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    opacity: 0; 
+    transition: opacity 0.8s ease; 
+}
+
+
+.navbar:hover ul {
+    opacity: 1;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar li a {
+    color: var(--text-with-background);
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.navbar li a:hover {
+    color: #fff; 
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-row: 1/span 2;
+    
+    position: relative;
+    background-image:url(Hintergurnd.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding-top: 10px;
+    margin: 3px;
+
+    justify-content: center;
+
+    background-color: var(--light-background);
+
+    z-index: 1;
+}
+
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-row: 3;
+
+    padding-top: 10px;
+    margin: 3px;
+
+    justify-content: center;
+
+    background-color: var(--light-background);
+}
+
+.text p,h2{
+    color: var(--text-primary);
+    font-family:Arial, Helvetica, sans-serif
+}
+.footer{
+    display: flex;
+    grid-row: 4;
+
+    padding-top: 10px;
+    margin: 3px;
+
+    justify-content: center;
+
+    background-color: var(--light-background);
+}
+
+#Hamburger{
+    color: var(--background);
+    left: 50px;
+    z-index: 101;
+}
