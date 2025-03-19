@@ -1,0 +1,282 @@
+
+:root{
+    --text-primary: #2d3b32;
+    --text-secondary: rgba(28, 38, 31, 0.631);
+    --text-with-background: rgba(226, 244, 231, 0.847);
+
+    --background: #c9f1d7;
+    --light-background: #EFF8F2;
+    --navbar-background: #46bf73;
+
+    --selected: #3AA35D;
+    --unselected: rgb(37, 100, 59);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: var(--background);
+}
+
+#shortText,
+h1{
+    color: var(--text-with-background);
+}
+
+#shortText{
+    font-family:'Courier New', Courier, monospace;
+}
+
+.title h1{
+    font-size: 100px;
+}
+.mainContainer {
+    display: grid;
+    grid-template-rows: 100vh auto auto 200px ;
+    grid-template-columns:80px 1fr 1fr 1fr;
+
+    /*animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;*/
+    
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-row: 1;
+    grid-column: 2/ span 4;
+    
+    position: relative;
+    background-image:url(Bilder/Hintergurnd.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    justify-content: center;
+
+    background-color: var(--light-background);
+
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 80px; 
+    height: 100vh; 
+    background-color: var(--navbar-background);
+    z-index: 100000; 
+
+    transition: 200ms ease;
+}
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.nav-item{
+    width: 100%;
+    font-size: 20px;
+}
+
+.nav-item:first-child {
+    margin-top: 20px;
+}
+
+.nav-item:last-child {
+    margin-top: auto;
+}
+
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    color: var(--unselected);
+    text-decoration: none;
+    filter: grayscale(75%) ;
+    transition: 200ms;
+}
+
+.nav-link:hover{
+    filter: grayscale(0%);
+    color: var(--selected);
+}
+
+.link-text {
+    display: none;
+    margin-left: 16px;
+}
+
+.nav-link i{
+    min-width: 30px;
+    margin: 0 24px;
+
+    color: var(--selected);
+}
+
+.navbar:hover{
+    width: 200px;
+}
+
+.navbar:hover .link-text{
+    display: block;
+}
+
+.text{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    align-items: start;
+    grid-row: 2;
+    grid-column: 2/span 2;
+
+    min-height: 100vh;
+
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px ;
+
+
+    background-color: var(--light-background);
+}
+
+#AboutMe {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+
+#Skills {
+    padding-top: 50px;
+}
+
+.text p,h3, h2, li{
+    color: var(--text-primary);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+p{
+    font-size: 20px;
+}
+
+h3{
+    font-size: 25px;
+}
+
+h2{
+    font-size: 30px;
+}
+.foto{
+    grid-row: 2;
+    grid-column: 4;
+    padding: 10px;
+    margin: 10px;
+
+    max-height: 250px;
+    border-radius: 20px ;
+
+    background-color: var(--light-background);
+}
+
+.projects{
+    display: flex;
+    grid-row: 3;
+    grid-column: 2/span 3;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px ;
+
+    min-height: 100vh;
+
+    background-color: var(--light-background);
+}
+.project-img{
+    height: 100%;
+}
+.project-1{
+    width: 33%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+    transition: 200ms;
+}
+
+.project-1:hover{
+    width: 50%;
+}
+
+.project-2{
+    width: 33%;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+    transition: 200ms;
+}
+
+.project-2:hover{
+    width: 50%;
+}
+
+.project-3{
+    width: 33%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20spx;
+    overflow: hidden;
+    transition: 200ms;
+}
+
+.project-3:hover{
+    width: 50%;
+}
+
+.footer{
+    grid-row: 4;
+    grid-column: 2/span 3;
+
+    padding-top: 10px;
+    margin: 3px;
+
+    background-color: var(--light-background);
+}
+
+/*@keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}*/
+
+body::-webkit-scrollbar{
+    width: 4px;
+}
+
+body::-webkit-scrollbar-track{
+    background: var(--background);
+}
+body::-webkit-scrollbar-thumb{
+    background: var(--selected);
+}
+
+html {
+    scroll-behavior: smooth;
+}
