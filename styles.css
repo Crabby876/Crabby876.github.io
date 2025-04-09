@@ -48,12 +48,7 @@ h1{
 .mainContainer {
     display: grid;
     grid-template-rows: 100vh auto auto 200px ;
-    grid-template-columns:80px 1fr 1fr 1fr;
-
-    /*animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0;*/
-    
+    grid-template-columns:80px 1fr 1fr 1fr;    
 }
 
 .title {
@@ -304,6 +299,7 @@ h2{
 }
 
 .footer{
+    text-decoration: none;
     grid-row: 4;
     grid-column: 2/span 3;
 
@@ -313,16 +309,9 @@ h2{
     background-color: var(--light-background);
 }
 
-/*@keyframes appear {
-    from{
-        opacity: 0;
-        scale: 0.5;
-    }
-    to {
-        opacity: 1;
-        scale: 1;
-    }
-}*/
+.footer a{
+    color: var(--text-primary);
+}
 
 body::-webkit-scrollbar{
     width: 4px;
