@@ -242,10 +242,31 @@ h2{
     border-radius: 20px ;
 
     background-color: var(--light-background);
-
     overflow: hidden;
 }
 
+.CV-Img{
+    height: 45vh;
+    width: 50vh;
+
+    border-radius: 20px;
+
+    background-image: url(Bilder/CV-Pic.png);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: grayscale(100%);
+
+    transition: 500ms;
+}
+
+.CV-Img:hover{
+    filter: grayscale(0%);
+    height: 47vh;
+    width: 55vh;
+}
 
 .projects{
     display: flex;
