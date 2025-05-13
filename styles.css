@@ -1,10 +1,10 @@
 
 :root{
-    --text-primary: #2d3b32;
-    --text-secondary: rgba(28, 38, 31, 0.631);
+    --text-primary: #3c4a3e;
+    --text-secondary: #3c4a3e;
     --text-with-background: rgba(226, 244, 231, 0.847);
 
-    --background: #c9f1d7;
+    --background: #76D188;
     --light-background: #EFF8F2;
     --navbar-background: #46bf73;
 
@@ -35,7 +35,7 @@ a{
 
 #shortText,
 h1{
-    color: var(--text-with-background);
+    color: var(--text-primary);
 }
 
 #shortText{
@@ -48,7 +48,7 @@ h1{
 .mainContainer {
     display: grid;
     grid-template-rows: 100vh auto auto 200px ;
-    grid-template-columns:80px 1fr 1fr 1fr;    
+    grid-template-columns:0px 1fr 1fr 1fr;    
 }
 
 .title {
@@ -66,32 +66,26 @@ h1{
     background-attachment: fixed;
 
     justify-content: center;
-
-    background-color: var(--light-background);
-
     z-index: 1;
-}
-
-.title h1{
-    padding-left: 100px;
-}
-
-.title p{
-    padding-left: 60px;
 }
 
 .navbar {
     display: flex;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 80px; 
     height: 100vh; 
     background-color: var(--navbar-background);
-    z-index: 100000; 
+    z-index: 100000;
 
     transition: 200ms ease;
 }
+
+.title, .text, .projects, .footer {
+    margin-left: 80px !important; /* Oder setze grid-column für alle auf 2 / span 3 */
+}
+
 .navbar-nav {
     list-style: none;
     padding: 0;
@@ -151,30 +145,50 @@ h1{
     display: block;
 }
 
-.text{
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    align-items: start;
+.text {
+    grid-column: 2 / span 3;
     grid-row: 2;
-    grid-column: 2/span 2;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 50px 1fr;
 
-    min-height: 100vh;
+    height: 100vh;
+}
 
-    padding: 10px;
+#AboutMe{
+    grid-column: 1;
+    display: felx;
+    flex-direction: column;
+}
+
+#AboutMeTitle {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    border-radius:20px ;
     margin: 10px;
-    border-radius: 20px ;
-
+    height: 20px;
+    padding: 10px;
 
     background-color: var(--light-background);
 }
-
-#AboutMe {
-    display: flex;
-    flex-direction: column;
-    max-width: 50%;
+#AboutMeText{
+    grid-column: 1;
+    grid-row: 2;
+    background-color: var(--light-background);
+    border-radius: 20px;
+    
+    padding: 10px;
+    margin: 10px;
 }
-
+#Skills{
+    grid-column: 1;
+    grid-row: 2;
+    background-color: var(--light-background);
+    border-radius: 20px;
+    
+    padding: 10px;
+    margin: 10px;
+}
 #AboutMe h2{
     display: flex;
     justify-content: end;
@@ -211,34 +225,31 @@ h2{
 }
 
 .foto-CV{
-    display: flex;
-    flex-direction: column;
+    grid-column: 2;
     grid-row: 2;
-    grid-column: 4;
+    display: grid;
+    grid-template-rows: 50% 50%;
 
 }
 
 .foto{
+    grid-row: 1;
     padding: 10px;
     margin: 10px;
 
-    height: 50vh;
     border-radius: 20px ;
 
     background-color: var(--light-background);
 }
 
-
-
 .CV{
+    grid-row: 2;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    padding: 10px;
     margin: 10px;
 
-    height: 50vh;
+    height: 50vh - 5;
     border-radius: 20px ;
 
     background-color: var(--light-background);
@@ -246,8 +257,8 @@ h2{
 }
 
 .CV-Img{
-    height: 45vh;
-    width: 50vh;
+    height: 300px;
+    width: 400px;
 
     border-radius: 20px;
 
@@ -264,14 +275,14 @@ h2{
 
 .CV-Img:hover{
     filter: grayscale(0%);
-    height: 47vh;
-    width: 55vh;
+    height: 350px;
+    width: 52vh;
 }
 
 .projects{
-    display: flex;
+    grid-column: 2/-1;
     grid-row: 3;
-    grid-column: 2/span 3;
+    display: flex;
     padding: 10px;
     margin: 10px;
     border-radius: 20px ;
@@ -320,12 +331,13 @@ h2{
 }
 
 .footer{
+    grid-column: 2/-1;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
-    grid-row: 4;
-    grid-column: 2/span 3;
-
-    padding-top: 10px;
-    margin: 3px;
+    padding-left: 10px;
+    margin: 10px;
+    border-radius: 20px;
 
     background-color: var(--light-background);
 }
@@ -347,4 +359,71 @@ body::-webkit-scrollbar-thumb{
 
 html {
     scroll-behavior: smooth;
+}
+
+.welcome-animation {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+    justify-content: flex-end;
+}
+
+.laptop {
+    width: 800px;
+    height: 500px;
+    background: #1e1e1e;
+    border: 8px solid #444;
+    border-bottom: 40px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    position: relative;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    color: #ffffff;
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+#typing-code{
+    white-space: pre-wrap;
+}
+
+
+.code-output {
+    position: absolute;
+    top: 50%; 
+    left: 40px; 
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-family: 'Courier New', monospace;
+    color: var(--text-primary);
+    display: none; 
+    z-index: 10; 
+}
+
+.code-output h1, .code-output p {
+    color: var(--text-primary);
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 2; transform: translateY(0); }
+}
+
+#typing-code::after {
+    content: "|";
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
 }
