@@ -1,11 +1,11 @@
 
 :root{
     --text-primary: #3c4a3e;
-    --text-secondary: #3c4a3e;
-    --text-with-background: rgba(226, 244, 231, 0.847);
+    --text-secondary: #444;
+    --text-with-background: #dad7cd;
 
     --background: #76D188;
-    --light-background: #EFF8F2;
+    --light-background: #46bf73;
     --navbar-background: #46bf73;
 
     --selected: #3AA35D;
@@ -146,45 +146,50 @@ h1{
 }
 
 .text {
+    margin-top: 100px;
     grid-column: 2 / span 3;
     grid-row: 2;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
     grid-template-rows: 50px 1fr;
 
     height: 100vh;
 }
 
 #AboutMe{
-    grid-column: 1;
+    grid-column: 2;
     display: felx;
     flex-direction: column;
 }
 
 #AboutMeTitle {
-    grid-column: 1 / -1;
+    grid-column: 2 / -2;
     grid-row: 1;
     border-radius:20px ;
     margin: 10px;
-    height: 20px;
-    padding: 10px;
+    height: 30px;
+    padding-bottom: 10px;
+    text-align: center;
 
     background-color: var(--light-background);
 }
 #AboutMeText{
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 2;
     background-color: var(--light-background);
     border-radius: 20px;
+    text-align: center;
     
     padding: 10px;
     margin: 10px;
 }
 #Skills{
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 2;
     background-color: var(--light-background);
     border-radius: 20px;
+    text-align: center;
+
     
     padding: 10px;
     margin: 10px;
@@ -205,10 +210,12 @@ h1{
 
 #Skills ul{
     margin-left: 50px;
+    list-style: none;
+    padding: 0px;
 }
 
 .text p,h3, h2, li{
-    color: var(--text-primary);
+    color: var(--text-secondary);
     font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -225,10 +232,10 @@ h2{
 }
 
 .foto-CV{
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 2;
     display: grid;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 40% 60%;
 
 }
 
@@ -248,6 +255,7 @@ h2{
     justify-content: center;
     align-items: center;
     margin: 10px;
+    margin-bottom: 62px;
 
     height: 50vh - 5;
     border-radius: 20px ;
@@ -342,8 +350,8 @@ h2{
     background-color: var(--light-background);
 }
 
-.footer a{
-    color: var(--text-primary);
+.footer a, p, i{
+    color: var(--text-secondary);
 }
 
 body::-webkit-scrollbar{
