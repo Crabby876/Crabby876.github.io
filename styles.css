@@ -52,11 +52,13 @@ h1{
 }
 
 .title {
+
     display: flex;
     flex-direction: column;
     align-items: start;
     grid-row: 1;
     grid-column: 2/ span 4;
+
     
     position: relative;
     background-image:url(Bilder/Hintergrund.png);
@@ -77,14 +79,18 @@ h1{
     width: 80px; 
     height: 100vh; 
     background-color: var(--navbar-background);
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
     z-index: 100000;
 
     transition: 200ms ease;
 }
 
-.title, .text, .projects, .footer {
+.title, .text {
     margin-left: 80px !important; /* Oder setze grid-column für alle auf 2 / span 3 */
 }
+ .projects, .footer{
+    margin-left: 100px !important;
+ }
 
 .navbar-nav {
     list-style: none;
@@ -152,6 +158,7 @@ h1{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 1fr;
     grid-template-rows: 50px 1fr;
+    justify-content: center;
 
     height: 100vh;
 }
@@ -170,6 +177,7 @@ h1{
     height: 30px;
     padding-bottom: 10px;
     text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
 
     background-color: var(--light-background);
 }
@@ -179,6 +187,7 @@ h1{
     background-color: var(--light-background);
     border-radius: 20px;
     text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
     
     padding: 10px;
     margin: 10px;
@@ -189,6 +198,7 @@ h1{
     background-color: var(--light-background);
     border-radius: 20px;
     text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
 
     
     padding: 10px;
@@ -243,10 +253,22 @@ h2{
     grid-row: 1;
     padding: 10px;
     margin: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
 
     border-radius: 20px ;
 
     background-color: var(--light-background);
+    
+}
+
+.FotoImg{
+    height: 85%;
+    padding-top: 7.5%;
+    background-image: url("Bilder/Bewerbungs\ bild.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
 }
 
 .CV{
@@ -259,19 +281,28 @@ h2{
 
     height: 50vh - 5;
     border-radius: 20px ;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
 
     background-color: var(--light-background);
     overflow: hidden;
 }
 
+.CV-img-container{
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+
+}
+
 .CV-Img{
-    height: 300px;
-    width: 400px;
+    height: 90%;
+    width: 90%;
 
     border-radius: 20px;
 
     background-image: url(Bilder/CV-Pic.png);
-
+    margin-top: 20px;
+    margin-left: 13px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -283,69 +314,180 @@ h2{
 
 .CV-Img:hover{
     filter: grayscale(0%);
-    height: 350px;
-    width: 52vh;
+    height: 95%;
+    width: 95%;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .projects{
     grid-column: 2/-1;
     grid-row: 3;
     display: flex;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 20px ;
-
+    flex-direction: column;
     min-height: 100vh;
+    align-items: center;
+    padding-top: 150px;
+    gap: 100px;
 
+}
+.projects-title {
+    margin-bottom: 20px;
+    text-align: center;
     background-color: var(--light-background);
+
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+
+}
+
+.project-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .project-img{
     height: 100%;
 }
 .project-1{
-    width: 33%;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    width: 500px;
+    height: 300px;
+    display: flex   ;
+    border-radius: 20px;
     overflow: hidden;
     transition: 200ms;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    z-index: 1;
+
+    background: #1e1e1e;
+    border: 8px solid #444;
+    border-bottom: 40px solid #444;
+}
+
+.project-1 img{
+    border-radius: 20px;
+    height: 100%;
 }
 
 .project-1:hover{
-    width: 50%;
+    width: 520px;
+    height: 320px;
+    box-shadow: 0 0 100px rgba(0,0,0,0.4);
+    z-index: 10;
 }
 
 .project-2{
-    width: 33%;
-    align-items: center;
+    width: 500px;
+    height: 300px;
+    display: flex   ;
+    border-radius: 20px;
     overflow: hidden;
-    height: 100%;
     transition: 200ms;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    z-index: 1;
+
+    background: #1e1e1e;
+    border: 8px solid #444;
+    border-bottom: 40px solid #444;
+}
+
+.project-2 img{
+    margin-top: 10px;
+    border-radius: 20px;
+    height: 75%;
 }
 
 .project-2:hover{
-    width: 50%;
+    width: 530px;
+    height: 320px;
+    box-shadow: 0 0 100px rgba(0,0,0,0.4);
+    z-index: 10;
 }
 
 .project-3{
-    width: 33%;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20spx;
+    width: 500px;
+    height: 300px;
+    display: flex   ;
+    border-radius: 20px;
     overflow: hidden;
     transition: 200ms;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    z-index: 1;
+
+    background: #1e1e1e;
+    border: 8px solid #444;
+    border-bottom: 40px solid #444;
+}
+
+.project-3 img{
+    margin-top: 10px;
+    border-radius: 20px;
+    height: 75%;
 }
 
 .project-3:hover{
-    width: 50%;
+    width: 520px;
+    height: 320px;
+    box-shadow: 0 0 100px rgba(0,0,0,0.4);
+    z-index: 10;
+}
+
+.project-1, .project-2, .project-3 {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.project-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 200ms;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.project-1:hover .project-description,
+.project-2:hover .project-description,
+.project-3:hover .project-description {
+    opacity: 1;
+}
+
+.project-1:hover,
+.project-2:hover,
+.project-3:hover{
+        border-bottom: 40px solid rgba(42, 103, 64, 0.8);
+}
+
+.project-description {
+    background-color: rgba(42, 103, 64, 0.8);
 }
 
 .footer{
     grid-column: 2/-1;
+    max-height: 15vh;
     display: flex;
     flex-direction: column;
     text-decoration: none;
     padding-left: 10px;
     margin: 10px;
     border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
 
     background-color: var(--light-background);
 }
@@ -380,8 +522,9 @@ html {
 }
 
 .laptop {
-    width: 800px;
-    height: 500px;
+    width: 40vw;
+    max-width: 800px;
+    aspect-ratio: 16 / 10;
     background: #1e1e1e;
     border: 8px solid #444;
     border-bottom: 40px solid #444;
@@ -391,6 +534,7 @@ html {
     padding: 10px;
     font-family: 'Courier New', monospace;
     color: #ffffff;
+    z-index: 1;
 }
 
 .screen {
@@ -406,7 +550,6 @@ html {
 
 
 .code-output {
-    position: absolute;
     top: 50%; 
     left: 40px; 
     transform: translateY(-50%);
@@ -414,12 +557,13 @@ html {
     font-family: 'Courier New', monospace;
     color: var(--text-primary);
     display: none; 
-    z-index: 10; 
+    z-index: 1; 
 }
 
 .code-output h1, .code-output p {
     color: var(--text-primary);
     margin: 0;
+    padding: 20px;
 }
 
 @keyframes fadeIn {
@@ -435,3 +579,5 @@ html {
 @keyframes blink {
     50% { opacity: 0; }
 }
+
+
