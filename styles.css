@@ -160,7 +160,7 @@ h1{
     grid-template-rows: 50px 1fr;
     justify-content: center;
 
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #AboutMe{
