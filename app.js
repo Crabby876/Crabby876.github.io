@@ -1,4 +1,4 @@
-const codeText = `\nprint("Doruk Güler")\nprint(""IMS student on a mission to become a coding expert"")`;
+const codeText = `\nprint("Doruk Güler")\nprint('"IMS student on a mission to become a coding expert"')`;
 const typingElement = document.getElementById("typing-code");
 const outputElement = document.getElementById("code-output");
 
