@@ -27,6 +27,7 @@ h2,
 h3
 {
     color: var(--text-primary);
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 a{
@@ -366,6 +367,7 @@ h2{
     background: #1e1e1e;
     border: 8px solid #444;
     border-bottom: 40px solid #444;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .project-1 img{
@@ -394,6 +396,7 @@ h2{
     background: #1e1e1e;
     border: 8px solid #444;
     border-bottom: 40px solid #444;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .project-2 img{
@@ -423,6 +426,7 @@ h2{
     background: #1e1e1e;
     border: 8px solid #444;
     border-bottom: 40px solid #444;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .project-3 img{
@@ -494,6 +498,7 @@ h2{
 
 .footer a, p, i{
     color: var(--text-secondary);
+    
 }
 
 body::-webkit-scrollbar{
