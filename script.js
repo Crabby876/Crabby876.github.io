@@ -80,7 +80,7 @@ const io = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
 // ===== Hero typing animation =====
-const codeText = `print("Doruk Güler")\nprint('"IMS student on a mission to become a coding expert"')`;
+const codeText = `print("Doruk Güler")\nprint('"IMS student on a mission to become an expert in coding"')`;
 const typedEl = document.getElementById('typed');
 let i = 0;
 function tick() {
