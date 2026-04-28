@@ -26,21 +26,21 @@ marquee.innerHTML = list.map(s => `
 const projects = [
   {
     title: "Pingpong Game",
-    description: "A pingpong game built in C# (WinForms) with classic mechanics and clean code.",
+    description: "This project is a classic ping pong game developed as a desktop application using C# and WinForms. It recreates the traditional arcade-style gameplay, allowing players to control paddles, compete against an opponent and experience smooth and responsive mechanics.",
     href: "https://github.com/Crabby876/lernperiode-3",
     img: "imgs/project1.png",
     tech: ["C#", "WinForms"],
   },
   {
     title: "CarSuggester AI",
-    description: "An AI application that helps you find the perfect car based on your preferences.",
+    description: "This project is an intelligent car recommendation application that assists users in finding the ideal vehicle based on their individual preferences. By leveraging machine learning techniques and data analysis, the system evaluates factors such as budget, performance and other criteria to generate personalized suggestions.",
     href: "https://github.com/Crabby876/CarSuggester",
     img: "imgs/project2.png",
     tech: ["Python", "Machine Learning", "Pandas"],
   },
   {
-    title: "Typing Trainer",
-    description: "An app that helps you practice typing and tracks your progress over time.",
+    title: "KeyTrainer",
+    description: "This project is an interactive typing practice application designed to help users improve their typing speed and accuracy over time. It provides a simple and intuitive graphical interface built with Tkinter, making it accessible and easy to use.",
     href: "https://github.com/Crabby876/lernperiode-9",
     img: "imgs/project3.png",
     tech: ["Python", "Tkinter"],
