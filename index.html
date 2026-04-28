@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doruk Güler · Portfolio</title>
+  <meta name="description" content="Portfolio of Doruk Güler – IMS student focused on software development, games and machine learning." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav class="sidebar" aria-label="Main navigation">
+    <ul>
+      <li class="first"><a href="#about"><svg viewBox="0 0 24 24" class="icon"><path d="M20 21a8 8 0 1 0-16 0"/><circle cx="12" cy="7" r="4"/></svg><span>About</span></a></li>
+      <li><a href="#projects"><svg viewBox="0 0 24 24" class="icon"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg><span>Projects</span></a></li>
+      <li><a href="#contact"><svg viewBox="0 0 24 24" class="icon"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg><span>Contact</span></a></li>
+      <li class="last"><a href="#home"><svg viewBox="0 0 24 24" class="icon"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg><span>Home</span></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="section section-light hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span id="heroBadge" class="badge hidden-up">Portfolio · 2026</span>
+          <h1 id="heroTitle" class="hidden-down">Doruk <span class="accent-primary">Güler</span></h1>
+          <p id="heroBio" class="hidden-down lead">IMS student on a mission to become a coding expert. Focused on software, game and AI development.</p>
+          <div id="heroBtns" class="hidden-down btn-row">
+            <a href="#projects" class="btn btn-primary">View projects</a>
+            <a href="#contact" class="btn btn-ghost">Contact</a>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2">
+          <div class="glass terminal-wrap float">
+            <div class="terminal">
+              <div class="dots">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              </div>
+              <pre><code id="typed" class="caret"></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint">scroll ↓</div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section-dark">
+      <div class="container stack">
+        <div class="reveal center">
+          <p class="eyebrow accent">01 · Who am I?</p>
+          <h2>Hello, I'm <span class="accent">Doruk</span>.</h2>
+        </div>
+        <div class="narrow">
+          <div class="reveal glass-dark card-pad text-block">
+            <p>I am an 18-year-old IMS student based in Switzerland with a strong interest in computer science and technology. Over the past few years, I have built a solid foundation in informatics and continuously expand my knowledge projects and I will continue to do so.</p>
+            <p>My journey in programming started with simple tools like Scratch and has since developed into working with real programming languages like C#,Python and many more, allowing me to turn ideas into real applications. I enjoy solving real problems with my skills.</p>
+            <p>I am interested in AI and its impact on the future of informatics. I am curious about how AI is transforming industries and changing everyday life. And hope that it won't replace me...</p>
+            <p>What ever. Currently, I am working on a website for my first client, which is kinda cool.</p>
+            <a href="Lebenslauf_DorukGüler.pdf" download class="btn btn-accent small">CV ↓</a>
+          </div>
+
+          <div class="reveal reveal-delay-2 glass-dark card-pad">
+            <h3 class="skills-title">Skills</h3>
+            <div class="marquee-mask">
+              <div class="marquee" id="marquee"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section section-light">
+      <div class="container">
+        <div class="reveal proj-head">
+          <p class="eyebrow primary">02 · Work</p>
+          <h2>Projects</h2>
+          <p class="muted">A selection of projects I've worked on over the past few years.</p>
+        </div>
+        <div class="projects" id="projects-list"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-dark">
+      <div class="container">
+        <div class="reveal center narrow-sm">
+          <p class="eyebrow accent">03 · Contact</p>
+          <h2>Let's talk.</h2>
+          <p class="muted-light">Send me an email or connect with me – I'd love to hear from you.</p>
+        </div>
+        <div class="reveal reveal-delay-2 contact-grid">
+          <a href="mailto:doriguler@gmail.com" class="glass-dark contact-card">
+            <svg viewBox="0 0 24 24" class="icon big accent-stroke"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+            <span>doriguler@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/doruk-g%C3%BCler-49b955353/" target="_blank" rel="noreferrer" class="glass-dark contact-card">
+            <svg viewBox="0 0 24 24" class="icon big accent-stroke"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/Crabby876" target="_blank" rel="noreferrer" class="glass-dark contact-card">
+            <svg viewBox="0 0 24 24" class="icon big accent-stroke"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+        <p class="reveal footer">© <span id="year"></span> Doruk Güler · Built with care</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
